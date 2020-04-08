@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <style>
+      html {
+        height: 100%;
+      }
+      body{
+        margin: 0;
+      }
+      .map {
+        height: 100vh;
+        width: 100%;
+        z-index: 2;
+      }
+      .form-wrapper{
+        position: absolute;
+        z-index: 1;
+        top: 6em;
+        left: 0.6em;
+        background-color: rgba(0,0,0, 0.1);
+        padding: 1em 1.5em 1em 1.5em;
+      }
+      .title{
+        margin-top: 0;
+        margin-bottom: 0.7em;
+      }
+      input{
+        margin-bottom: 0.5em;
+      }
+    </style>
+    <title>My Map</title>
+  </head>
+  <body>
+    <div class="form-wrapper">
+      <form id="coordForm">
+        <h4 class="title">Type coordinates here:</h4>
+        <div><input type="number" step="any" name="Latitude" placeholder="Latitude" required></div>
+        <div><input type="number" step="any" name="Longtitude" placeholder="Longtitude" required></div>
+        <div><input type="submit" value="Save"></div>
+      </form>
+    </div>
+    <div id="map" class="map"></div>
+    <script src="index.js"></script>
+  </body>
+</html>
